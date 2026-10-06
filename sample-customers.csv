@@ -1,0 +1,4 @@
+id,name,phone,segment,budget,type,city,tags,active
+CUST-001,Sample Customer A,919999999991,Retailer,Premium,Existing,Surat,"Industrial, Regular",true
+CUST-002,Sample Customer B,919999999992,Workshop,Standard,New,Surat,Automotive,true
+CUST-003,Sample Customer C,919999999993,Distributor,High Volume,Existing,Ahmedabad,B2B,true

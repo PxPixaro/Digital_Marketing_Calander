@@ -9,11 +9,11 @@
 <section id="settings" class="page">
 <div class="grid two">
   <div class="panel"><h3>Company Settings</h3><label>Company Name<input id="companyName"></label><label>Customer Care Number<input id="customerCare"></label><label>Product Range Link<input id="productRangeLink"></label><button class="btn primary" id="saveSettings">Save Settings</button></div>
-  <div class="panel"><div class="panel-head"><div><h3>Google Sheets Live Sync</h3><p class="muted small">Use the Apps Script Web App as the shared database for all staff/devices.</p></div><span id="connectionState" class="badge">Not connected</span></div>
-    <label>Apps Script Web App URL<input id="sheetUrl" placeholder="https://script.google.com/macros/s/.../exec"></label>
-    <label>Sync Key<input id="syncKey" type="password" placeholder="Same key used in Code.gs"></label>
-    <div class="actions"><button class="btn primary" id="connectSheet">Connect & Test</button><button class="btn" id="pullLive">Pull Latest Data</button><button class="btn ghost" id="pushLive">Push Local Data</button></div>
-    <div class="note"><strong>Recommended:</strong> Google Sheet is the master database. Manual edits, Excel imports, festivals and birthdays are saved to Google Sheet automatically when live sync is connected. Local browser storage remains as a fallback copy.</div>
+  <div class="panel"><div class="panel-head"><div><h3>Google Sheets Live Sync</h3><p class="muted small">Google Sheets is pre-connected as the shared live database for all staff/devices.</p></div><span id="connectionState" class="badge">Not connected</span></div>
+    <label>Apps Script Web App URL<input id="sheetUrl" readonly></label>
+    <label>Sync Key<input id="syncKey" type="password" readonly></label>
+    <div class="actions"><button class="btn primary" id="connectSheet">Test Live Connection</button><button class="btn" id="pullLive">Pull Latest Data</button><button class="btn ghost" id="pushLive">Push Local Data</button></div>
+    <div class="note"><strong>Live Database:</strong> Google Sheet is the master database. Calendar edits, Excel imports, festivals and birthdays sync automatically. Local browser storage remains as a fallback copy if the internet is temporarily unavailable.</div>
   </div>
 </div>
 <div class="panel danger-zone"><h3>Backup</h3><p class="muted">Keep an occasional JSON backup even when Google Sheets is connected.</p><div class="actions"><button class="btn" id="exportBackup">Export JSON Backup</button><label class="btn ghost file-btn">Restore Backup<input type="file" id="importBackup" accept=".json" hidden></label></div></div>
